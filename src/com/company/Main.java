@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+
+
         List<Question> questions = new ArrayList<>();
 
         questions.add(new Question("Question 1?",
@@ -54,6 +56,9 @@ public class Main {
             }
             System.out.println("Сhoose the answer(number):");
             String userAnswer = scanner.nextLine();
+            if(userAnswer.equals("q")){
+                System.exit(0);
+            }
             if (userAnswer.equals(_correctAnswer)) {
                 return true;
             }
